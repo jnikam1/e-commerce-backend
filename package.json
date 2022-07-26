@@ -1,0 +1,25 @@
+{
+  "name": "e-commerce-backend",
+  "version": "1.0.0",
+  "description": "e-commerce-backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnikam1/e-commerce-backend.git"
+  },
+  "author": "Jayesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnikam1/e-commerce-backend/issues"
+  },
+  "homepage": "https://github.com/jnikam1/e-commerce-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.7",
+    "nodemon": "^2.0.19"
+  }
+}
