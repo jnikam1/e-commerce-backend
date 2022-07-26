@@ -3,9 +3,14 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 require('dotenv').config()
 
+const cors = require('cors')
+var corsOptions = {origin:"http://localhost:3000"}
+
 const router = require('./routes/e-commerce.routes')
 
 const app = express()
+
+app.use(cors(corsOptions))
 
 app.use(bodyParser.json())
 
@@ -18,7 +23,7 @@ app.use('/e-commerce', router)
 
 // const PORT = 6000
 app.listen(process.env.PORT, () => {
-    console.log("Listening on 6000")
+    console.log("Listening on 8080")
 
 })
 
