@@ -6,7 +6,10 @@ require('dotenv').config()
 const cors = require('cors')
 var corsOptions = {origin:"http://localhost:3000"}
 
-const router = require('./routes/e-commerce.routes')
+const ecommerceRouter = require('./routes/e-commerce.routes')
+const signInRouter = require('./routes/sign-in.routes')
+const signUpRouter = require('./routes/sign-up.routes')
+const contactRouter = require('./routes/contact.routes')
 
 const app = express()
 
@@ -19,7 +22,12 @@ app.get('/', (req, res) => {
     res.send("Welcome to E-commerce App")
 })
 
-app.use('/e-commerce', router)
+app.use('/e-commerce', ecommerceRouter)
+
+app.use('/auth',signInRouter)
+
+app.use('/auth',signUpRouter)
+app.use('/contact',contactRouter)
 
 // const PORT = 6000
 app.listen(process.env.PORT, () => {
